@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "botclusterbg-415f"
+    labels:
+        app: "botclusterbg-415f"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: botclusterbgb3b1-botclusterbg-415f.c54a4559037e412eb3b4.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "botclusterbg-415f"
+                servicePort: 80
